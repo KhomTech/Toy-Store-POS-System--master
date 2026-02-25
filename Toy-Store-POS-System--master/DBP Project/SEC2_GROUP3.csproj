@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{592961F8-C871-4D52-9844-E8C2DC50B93A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DBP_Project</RootNamespace>
+    <AssemblyName>DBP Project</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.1.66\lib\net461\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.4\lib\net461\itextsharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=9.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.9.0.1\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="formBillingAddress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formBillingAddress.Designer.cs">
+      <DependentUpon>formBillingAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CurrentUser.cs" />
+    <Compile Include="formCart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formCart.Designer.cs">
+      <DependentUpon>formCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formIndex.Designer.cs">
+      <DependentUpon>formIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formLogin.Designer.cs">
+      <DependentUpon>formLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formManageCus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formManageCus.Designer.cs">
+      <DependentUpon>formManageCus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formManageCusShip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formManageCusShip.Designer.cs">
+      <DependentUpon>formManageCusShip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formManageEmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formManageEmp.Designer.cs">
+      <DependentUpon>formManageEmp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formOrder.Designer.cs">
+      <DependentUpon>formOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formPurchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formPurchase.Designer.cs">
+      <DependentUpon>formPurchase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formRegister.Designer.cs">
+      <DependentUpon>formRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formReportProfix.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formReportProfix.Designer.cs">
+      <DependentUpon>formReportProfix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formReportSell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formReportSell.Designer.cs">
+      <DependentUpon>formReportSell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormShippingAddress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormShippingAddress.Designer.cs">
+      <DependentUpon>FormShippingAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formShop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formShop.Designer.cs">
+      <DependentUpon>formShop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formManageProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formManageProduct.Designer.cs">
+      <DependentUpon>formManageProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formTaxinvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formTaxinvoice.Designer.cs">
+      <DependentUpon>formTaxinvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="formBillingAddress.resx">
+      <DependentUpon>formBillingAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formCart.resx">
+      <DependentUpon>formCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formIndex.resx">
+      <DependentUpon>formIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formLogin.resx">
+      <DependentUpon>formLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formManageCus.resx">
+      <DependentUpon>formManageCus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formManageCusShip.resx">
+      <DependentUpon>formManageCusShip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formManageEmp.resx">
+      <DependentUpon>formManageEmp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formOrder.resx">
+      <DependentUpon>formOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formPurchase.resx">
+      <DependentUpon>formPurchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formRegister.resx">
+      <DependentUpon>formRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formReportProfix.resx">
+      <DependentUpon>formReportProfix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formReportSell.resx">
+      <DependentUpon>formReportSell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormShippingAddress.resx">
+      <DependentUpon>FormShippingAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formShop.resx">
+      <DependentUpon>formShop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formManageProduct.resx">
+      <DependentUpon>formManageProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formTaxinvoice.resx">
+      <DependentUpon>formTaxinvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\A_simple_and_clean_LEGO_scene_with_a_background_of.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shipping-fast.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\terms-info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping-cart-add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping-cart-check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign-out-alt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\entrance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu-burger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lego-background-gsgamv3lffdlciji.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WallpaperDog-5479349.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WallpaperDog-5479404.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WallpaperDog-5479361.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WallpaperDog-5479365.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lego_border.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lego_silhouette.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bglego.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find-svgrepo-com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\top-view-interlocking-plastic-blocks-baby-shower.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cart-minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newspaper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping-cart-add %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-alt-circle-left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cart-shopping-fast.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order-history.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order-history %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order-history %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign-out-alt %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newspaper %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-gear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-alt-circle-left %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-alt-circle-left %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toy store.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-Photoroom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toymain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ty1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gemini_Generated_Image_vair05vair05vair.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
